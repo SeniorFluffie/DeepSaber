@@ -16,7 +16,7 @@ This project requires Python 3.8+, TF 2.2+ (recommended TF 2.3). See [`Dockerfil
 
 ## How to set up this project
 1. Download OxAI or your own beat maps
-2. Unzip them in `data/human_beatmaps/new_dataformat` 
+2. Unzip them in `data/dataset` 
     - Or change `config.dataset.beat_maps_folder`
 3. Run `src/generate_initial_dataset.py` (
     - `data/new_dataformat` (as set in `config.dataset.storage_folder`) with pickled DataFrames should be created

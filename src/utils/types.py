@@ -53,8 +53,8 @@ class BeatPreprocessingConfig:
 
 @dataclass
 class DatasetConfig:
-    beat_maps_folder: Path = ROOT_DIR / 'data/human_beatmaps/new_dataformat'
-    storage_folder: Path = ROOT_DIR / 'data/new_datasets'
+    beat_maps_folder: Path = ROOT_DIR / 'data/dataset'
+    storage_folder: Path = ROOT_DIR / 'data/generated_dataset'
     action_word_model_path: Path = storage_folder / 'fasttext.model'  # gensim FastText.KeyedVectors class
     normalization_stats_path: Path = storage_folder / 'col_stats.pkl'
     cols_to_normalize: Tuple = ('mfcc', 'prev', 'next', 'part',)

@@ -33,7 +33,7 @@ def main():
     random.seed(seed)
     config = Config()
 
-    config.dataset.storage_folder = base_folder / 'new_datasets'
+    config.dataset.storage_folder = base_folder / 'generated_dataset'
     config.audio_processing.use_cache = True
 
     model_path = base_folder / 'temp'
@@ -154,14 +154,14 @@ def find_temperature_and_generate(base_folder, train, val, test, model_path, tes
                                              custom_objects={'Perplexity': Perplexity, 'mish': tfa.activations.mish})
     stateful_model.summary()
     timer('Loaded stateful model', 5)
-    storage_folder = base_folder / 'new_datasets'
+    storage_folder = base_folder / 'generated_dataset'
     train, val, test = load_datasets(storage_folder)
     train_vec = get_vec_df(train)  # use train dataset to find good temperature
     folder_name = 'deepsaber'
     config.dataset.beat_maps_folder = base_folder / 'testing' / 'generated_songs'
     config.dataset.storage_folder = base_folder / f'{folder_name}_datasets'
     human_velocities = compute_multiple_velocities(train_vec.iloc[:100000])
-    input_folder = base_folder / 'human_beatmaps' / 'new_dataformat'
+    input_folder = base_folder / 'dataset'
     output_folder = config.dataset.beat_maps_folder
     timer = Timer()
     dirs = list(x for x in test.index.to_frame()["name"].unique()[:10])

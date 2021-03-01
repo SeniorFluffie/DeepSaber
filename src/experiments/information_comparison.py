@@ -37,7 +37,7 @@ def mainly_id():
     hp = None
 
     config.dataset.beat_maps_folder = config.dataset.beat_maps_folder.parent / 'new_dataformat'
-    config.dataset.storage_folder = base_folder / 'new_datasets'
+    config.dataset.storage_folder = base_folder / 'generated_dataset'
     song_folders = create_song_list(config.dataset.beat_maps_folder)
 
     # First generate all data using all of the audio features
@@ -111,7 +111,7 @@ def mainly_id():
 
     # Generate without derivatives
     config.dataset.beat_maps_folder = config.dataset.beat_maps_folder.parent / 'test_new_dataformat'
-    config.dataset.storage_folder = base_folder / 'test_new_datasets'
+    config.dataset.storage_folder = base_folder / 'test_generated_dataset'
     config.audio_processing.use_temp_derrivatives = False
     config.audio_processing.time_shift = None
     generate_datasets(song_folders, config)
@@ -152,7 +152,7 @@ def mainly_vec():
     hp = None
 
     config.dataset.beat_maps_folder = config.dataset.beat_maps_folder.parent / 'test_new_dataformat'
-    config.dataset.storage_folder = base_folder / 'test_new_datasets'
+    config.dataset.storage_folder = base_folder / 'test_generated_dataset'
     song_folders = create_song_list(config.dataset.beat_maps_folder)
 
     # First generate all data using all of the audio features

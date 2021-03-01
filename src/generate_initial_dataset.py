@@ -26,7 +26,7 @@ def main():
     # To generate full dataset
     song_folders = create_song_list(config.dataset.beat_maps_folder)
     # config.dataset.storage_folder = base_folder / 'old_datasets'
-    config.dataset.storage_folder = base_folder / 'new_datasets'
+    config.dataset.storage_folder = base_folder / 'generated_dataset'
 
     # To generate test dataset
     # song_folders = create_song_list(config.dataset.beat_maps_folder)[:100]

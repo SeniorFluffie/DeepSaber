@@ -4,7 +4,7 @@ import gensim
 import logging
 import pandas as pd
 
-storage_folder = Path('../../data/new_datasets')
+storage_folder = Path('../../data/generated_dataset')
 
 
 def eval_model(**kwargs):

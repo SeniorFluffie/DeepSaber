@@ -32,7 +32,7 @@ def main():
     # Use full dataset
     song_folders = create_song_list(config.dataset.beat_maps_folder)
     # config.dataset.storage_folder = base_folder / 'old_datasets'
-    config.dataset.storage_folder = base_folder / 'new_datasets'
+    config.dataset.storage_folder = base_folder / 'generated_dataset'
 
     # Use test set
     # song_folders = create_song_list(config.dataset.beat_maps_folder)[:100]
@@ -99,7 +99,7 @@ def main():
     dirs = [x for x in input_folder.glob('*/') if x.is_dir()]
 
     # Use human action placement from test set
-    # input_folder = base_folder / 'human_beatmaps' / 'new_dataformat'
+    # input_folder = base_folder / 'dataset'
     # dirs = list(x for x in test.index.to_frame()["name"].unique()[:13])
 
     for song_code in dirs:

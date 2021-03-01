@@ -777,9 +777,9 @@ def add_valid_analogy(lines, example_from, example_to, question_from, question_t
 
 
 def main():
-    models_folder = Path('../../data/new_datasets/models')
+    models_folder = Path('../../data/generated_dataset/models')
     models_folder.mkdir(parents=True, exist_ok=True)
-    corpus_path = Path('../../data/new_datasets/train_text.cor')
+    corpus_path = Path('../../data/generated_dataset/train_text.cor')
 
     model_path = str(models_folder / 'word2vec.model')
 

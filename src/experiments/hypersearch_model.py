@@ -121,7 +121,7 @@ def main():
 
         timer('Loaded stateful model', 5)
 
-        input_folder = base_folder / 'human_beatmaps' / 'new_dataformat'
+        input_folder = base_folder / 'dataset'
         output_folder = base_folder / 'testing' / 'generated_songs'
         song_codes_to_gen = list(x for x in test.index.to_frame()["name"].unique()[:5])
         song_codes_to_gen = ['133b', ]

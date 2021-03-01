@@ -108,7 +108,7 @@ def init_test():
     total = len(song_folders)
     print(f'Found {total} folders')
 
-    config.dataset.storage_folder = base_folder / 'new_datasets'
+    config.dataset.storage_folder = base_folder / 'generated_dataset'
     # config.dataset.storage_folder = base_folder / 'test_datasets'  # only 100 songs, for testing
     # config.audio_processing.use_cache = False
     # generate_datasets(song_folders, config, prefix)
