@@ -130,7 +130,7 @@ CMD ["/usr/sbin/sshd", "-D"]
 # Install Python libs
 RUN pip install --no-cache-dir \
     spacy~=2.2.4 \
-    pandas~=1.0.1 \
+    pandas~=1.0.4 \
     httplib2==0.11.3 \
     urllib3==1.24.1 \
     numpy~=1.18.2 \
@@ -138,9 +138,8 @@ RUN pip install --no-cache-dir \
     Scrapy~=2.0.0 \
     textblob~=0.15.3 \
     numba~=0.48.0 \
-    bayesian-optimization \tensorflow
-    numba~=0.48.0 \
-    pandas~=1.0.4 \
+    bayesian-optimization \
+    tensorflow \
     speechpy \
     soundfile \
     keras-tuner \
